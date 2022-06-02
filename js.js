@@ -35,13 +35,13 @@ const checkLength = (input, min) => {
   if (input.value.length < min) {
     const text = input.previousElementSibling.innerText;
 
-    showError(input, `${text.slice(0, -1)} musi posiadać min. ${min} znaków.`);
+    showError(input, `${text.slice(0, -1)} must contain at least ${min} characters.`);
   }
 };
 
 const checkPassword = (pass1, pass2) => {
   if (pass1.value !== pass2.value) {
-    showError(pass2, "hasła nie są identyczne!");
+    showError(pass2, "passwords dont't match!");
   }
 };
 
@@ -52,7 +52,7 @@ const validateEmail = (email) => {
   if (re.test(email.value)) {
     clearError(email);
   } else {
-    showError(email, "mail jest niepoprawny");
+    showError(email, "incorrect email address");
   }
 };
 
