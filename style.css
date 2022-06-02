@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    90deg,
+    #afcaef,
+    #b5b5b5
+  );
+}
+.wrapper {
+  width: 440px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+}
+form {
+  padding: 20px;
+  font-size: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-box {
+  margin-bottom: 15px;
+}
+.form-box label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.form-box.error input {
+  border: 1px solid rgb(36, 120, 255);
+  background-color: #4f9bff3f;
+}
+.form-box .error-text {
+  margin: 5px 0 0 10px;
+  font-size: 14px;
+  color: rgb(36, 120, 255);
+  visibility: hidden;
+}
+.form-box.error .error-text {
+  visibility: visible;
+}
+.control-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.send,
+.clear,
+.close {
+  display: block;
+  padding: 10px 0;
+  margin-left: 10px;
+  width: 100px;
+  font-size: 18px;
+  background-color: rgb(36, 120, 255);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.send:hover,
+.clear:hover,
+.close:hover {
+    background-color: rgb(32, 88, 179);
+}
+.clear{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(36, 120, 255);
+    color: rgb(36, 120, 255);
+}
+.clear:hover{
+    background-color: rgb(126, 176, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top:  -300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px black;
+    transition: 0.5s;
+    
+}
+.close{
+    margin-top: 20px;
+
+}
+.show-popup{
+    top: 150px;
+} 
